@@ -1996,7 +1996,7 @@ a:active {
       }
 
       .accordion__title:hover {
-        background-color: #fd6209;
+        background-color: #b8b8b8;
         color: #fff; /* title color when pointing a mouse */
       }
 
