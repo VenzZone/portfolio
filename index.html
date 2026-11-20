@@ -5,20 +5,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VENZON ARIOLA</title>
-    <link rel="icon" type="image/png" href="image/icons/favicon.png">
+    <link rel="icon" type="image/png" href="image/icons/favicon.ico">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Scripts for GLOBE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
   </head>
 
-  <body
+  <!-- <body
     style="
-      background-image: url('image/wirewallpng3.png');
+      background-image: url('image/trianglewall.png');
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
     "
-  >
+  > -->
 
   <!-- Burger Menu Button -->
   <button class="burger" onclick="toggleMenu()" >☰</button>
@@ -33,9 +37,9 @@
           <span data-text="V">V</span>
           <span data-text="E">E</span>
           <span data-text="N">N</span>
-          <span data-text="Z">Z</span>
+          <!-- <span data-text="Z">Z</span>
           <span data-text="O">O</span>
-          <span data-text="N">N</span>
+          <span data-text="N">N</span> -->
         </p>
       </div>
     </div>
@@ -83,13 +87,8 @@
 
     <!-- Menu Bar -->
     <div class="menu-bar">
+
       <div class="menu-item active" onclick="setActive(this)">
-      <a href="#home" class="anchor-link" onclick="location.reload(); return false;">
-        <i class="fas fa-home"></i>
-        <span>Home</span>
-      </a>
-      </div>
-      <div class="menu-item" onclick="setActive(this)">
         <a href="#profile" class="anchor-link">
           <i class="fas fa-user"></i>
           <span>Profile</span>
@@ -100,9 +99,9 @@
         <i class="fas fa-lightbulb"></i>
         <span>Skills</span>
         <div class="dropdown">
-          <a href="#graphic">🎨Designer</a>
-          <a href="#webdev">💻Web Dev</a>
-          <a href="#ict">🛠️ICT Support</a>
+          <a href="#graphic">💻Web & Graphic Designer</a>
+          <!-- <a href="#webdev">💻Web Dev</a> -->
+          <a href="#ict">🛠️IT Support Specialist</a> 
         </div>
       </div>
 
@@ -124,12 +123,18 @@
           <span>Trainings</span>
         </a>
       </div>
+      <div class="menu-item" onclick="setActive(this)">
+        <a href="#contact" class="anchor-link" onclick="showContactInfo();">
+          <i class="fas fa-address-book"></i>
+          <span>Contact</span>
+        </a>
+      </div>
     </div>
 
-    <div class="app-container"> <!--TOP SPACING -->
+    <div id="profile" class="app-container"> <!--TOP SPACING -->
     <!-- Start Container Profile -->
       
-    <div id="profile" class="">
+    <div>
     <br><br><br>
 
     <div class="layout">
@@ -138,7 +143,8 @@
       <div class="col-60" >
           <br>
           <h3 style="color: #fd6209;">Hello, I'm Venzon Ariola</h3>
-          <p class="bold">Web Developer | Graphic Designer | Technical Support</p>
+          <p class="bold">Graphic Designer | Front-End Designer | Tech Support Specialist</p>
+          
           <br>
           <p>
             As a versatile professional with expertise in web development, ICT Support , and graphic design,
@@ -161,7 +167,7 @@ With a strong background in frontend design, UI/UX, software and hardware troubl
   <div class="row2">
         <!-- Start 3 IMAGE HOVER -->
           <div class="container">
-        <a href="#webdev" class="box">
+        <a href="#graphic" class="box">
             <div class="imgBx">
                 <img src="image/webdev.png" alt="Web Development">
             </div>
@@ -196,6 +202,7 @@ With a strong background in frontend design, UI/UX, software and hardware troubl
     </div>  <!-- End 3 IMAGE HOVER -->
 
     <!-- START MARQUEE IMAGE -->
+     <br>
             <div class="marquee-container">
               <div class="marquee-wrapper">
                   <div class="marquee-content">
@@ -249,567 +256,687 @@ With a strong background in frontend design, UI/UX, software and hardware troubl
       
       </div>
 
+<!-- START IPHONE ACCORDION -->
 
+
+<!-- START IPHONE ACCORDION -->
 
       
       <!--START GRAPHIC SECTION-->
-      <div id="graphic" class="section">
-        <div class="venzvision"><!-- VenzVision Banner-->
-            <a href="https://www.behance.net/venzonariola1" target="_blank">
-              <img src="image/venzvision.png" alt="Preview" />
-             </a>
-          </div><!-- VenzVision Banner-->
-      
-      <div class="basicrow"><!-- START GRID Section -->
-        <div class="gridywrap">
-          
-          <div class="gridy-2 gridyhe-1">
-            <div class="gridimg" style="background-image: url('image/gridimage/weblayout.png')">&nbsp;</div>
-            <div class="gridinfo">
-              <h3>Web Design</h3>
-              <div class="gridmeta">
-                <!-- <p class="gridwhen"><i class="fa fa-clock-o"></i>  Nov 2024</p> -->
-                <p class="gridwho"> Wordpress/PHP</p>
-              </div>
-              <a href="https://www.behance.net/gallery/224281205/WordPress-Website-Development-WPBakery" class="grid-btn grid-more" target="_blank"><span><b>View</b></span> <i class="fa fa-eye"></i></i></a>
-            </div>
-          </div>
+      <div id="graphic" class="section">          
+           <!--START IPHONE ACCORDION-->
+           <!-- ================= 2. MARKUP ================= -->
+<div class="ipx" data-ipx role="region" aria-label="Feature showcase">
+  <div class="ipx__col-text">
+    <details class="ipx__item" name="ipx-feature">
+      <summary class="ipx__summary">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+        <span>UI/UX | Frontend Dev</span> 
+      </summary>
+      <div class="ipx__content">
+        <p class="ipx__text">⭐UI/UX | FRONTEND DEV<br> Bootstrap,Core PHP,Laravel,PHP,HTML,CSS,JAVA <br>Click to  <a href="https://www.behance.net/gallery/171927149/WEB-DESIGNER-FRONT-END-DEVELOPER" target="_blank" rel="noreferrer noopener">View Project</a>.</p>
+       </div>
+    </details>
 
-          <div class="gridy-1 gridyhe-1">
-            <div class="gridimg" style="background-image: url('image/gridimage/logoslide.gif')">&nbsp;</div>
-            <div class="gridinfo">
-              <h3>Logos</h3>
-              <div class="gridmeta">
-                <!-- <p class="gridwhen"><i class="fa fa-clock-o"></i>  May 2025</p> -->
-                <p class="gridwho"> Vol 1</p>
-              </div>
-              <a href="https://www.behance.net/gallery/222995045/Logo-Collection-Mockup" class="grid-btn grid-more" target="_blank"><span><b>View</b></span> <i class="fa fa-eye"></i></i></a>
-            </div>
-          </div>
+    <details class="ipx__item" name="ipx-feature">
+      <summary class="ipx__summary">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+        <span>Logo Archives</span>
+      </summary>
+      <div class="ipx__content">
+        <p class="ipx__text">⭐LOGO ARCHIVES<br> Photoshop |  <a aria-label="Venzon" href="https://www.behance.net/venzonariola1" target="_blank" rel="noreferrer noopener">Behance</a><br>Creating professional logos that communicate brand identity and recognition.<br>Click to  <a href="https://www.behance.net/gallery/222995045/Logo-Collection-Brand-Identity-Mockups" target="_blank" rel="noreferrer noopener">View Project</a>.</p>
+      </div>
+    </details>
 
-          <div class="gridy-1 gridyhe-2">
-            <div class="gridimg">
-            <video autoplay muted loop playsinline class="video-grid">
-              <source src="video/dataprivacy.mp4" type="video/mp4" >
-            </video>
-            </div>
-            <div class="gridinfo">
-              <h3>Feature Section</h3>
-              <div class="gridmeta">
-                <!-- <p class="gridwhen"><i class="fa fa-clock-o"></i>  May 2025</p> -->
-                <p class="gridwho"> Collection</p>
-              </div>
-              <a href="https://www.behance.net/gallery/225819377/Infographic-Cybersecurity-Project" class="grid-btn grid-more" target="_blank"><span><b>View</b></span> <i class="fa fa-eye"></i></i></a>
-            </div>
-          </div>
+    <details class="ipx__item" name="ipx-feature">
+      <summary class="ipx__summary">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+        <span>Wordpress Dev</span>
+      </summary>
+      <div class="ipx__content">
+        <p class="ipx__text">⭐WORDPRESS DEV<br> WP Bakery | Elementor<br>Building responsive, user-friendly websites tailored to client needs. <br>Click to  <a href="https://www.behance.net/gallery/224281205/WordPress-Website-Development" target="_blank" rel="noreferrer noopener">View Project</a>.</p>
+      </div>
+    </details>
 
-          <div class="gridy-2 gridyhe-1">
-            <div class="gridimg" style="background-image: url('image/gridimage/MacPC.png');">&nbsp;</div>
-            <div class="gridinfo">
-              <h3>UI/UX</h3>
-              <div class="gridmeta">
-                <!-- <p class="gridwhen"><i class="fa fa-clock-o"></i>  Feb 2022</p> -->
-                <p class="gridwho"> Background</p>
-              </div>
-              <a href="https://www.behance.net/gallery/224201399/Attendance-Tracking-System" class="grid-btn grid-more" target="_blank"><span><b>View</b></span> <i class="fa fa-eye"></i></i></a>
-            </div>
-          </div>
+    <details class="ipx__item" name="ipx-feature">
+      <summary class="ipx__summary">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+        <span>Layout Infographics</span>
+      </summary>
+      <div class="ipx__content">
+      <p class="ipx__text">⭐LAYOUT INFOGRAPHICS<br> Photoshop |  <a aria-label="Venzon" href="https://www.behance.net/venzonariola1" target="_blank" rel="noreferrer noopener">Behance</a><br>Transforming complex data into clear, visually compelling infographics that drive engagement.<br>Click to  <a href="https://www.behance.net/gallery/225819377/Cybersecurity-Awareness-Creative-Infographic-Design" target="_blank" rel="noreferrer noopener">View Project</a>.</p>  
+      </div>
+    </details>
 
-          <div class="gridy-1 gridyhe-1">
-            <div class="gridimg" style="background-image: url('image/gridimage/PNGAnimatedImageMockup.png')">&nbsp;</div>
-            <div class="gridinfo">
-              <h3>Animated Image</h3>
-              <div class="gridmeta">
-                <!-- <p class="gridwhen"><i class="fa fa-clock-o"></i> March 2025</p> -->
-                <p class="gridwho"> Venz Vision</p>
-              </div>
-              <a href="https://www.behance.net/gallery/224448855/Web-Portal" class="grid-btn grid-more" target="_blank"><span><b>View</b></span> <i class="fa fa-eye"></i></i></a>
-            </div>
-          </div>
+    <details class="ipx__item" name="ipx-feature">
+      <summary class="ipx__summary">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+        <span>Mockup Branding</span> 
+      </summary>
+      <div class="ipx__content">
+        <p class="ipx__text">⭐MOCKUP<br> Photoshop |  <a aria-label="Venzon" href="https://www.behance.net/venzonariola1" target="_blank" rel="noreferrer noopener">Behance</a><br>Bringing brand concepts to life with high-fidelity mockups. <br>Click to  <a href="https://www.behance.net/gallery/224201399/Branding-Zee-Gee-Mockup" target="_blank" rel="noreferrer noopener">View Project</a>.</p>
+      </div>
+    </details>
 
-          <div class="gridy-1 gridyhe-1">
-           <div class="gridimg">
-            <video autoplay muted loop playsinline class="video-grid">
-              <source src="video/infographic.mp4" type="video/mp4" >
-            </video>
-            </div>
-            <div class="gridinfo">
-              <h3>infographics</h3>
-              <div class="gridmeta">
-                <!-- <p class="gridwhen"><i class="fa fa-clock-o"></i> Aug 2023</p> -->
-                <p class="gridwho"> Venz Vision</p>
-              </div>
-              <a href="https://www.behance.net/gallery/224215127/Infographic-Insights" class="grid-btn grid-more" target="_blank"><span><b>View</b></span> <i class="fa fa-eye"></i></i></a>
-            </div>
-          </div>
-          
-        </div>
-      </div><!-- END GRID Section -->
+     <details class="ipx__item" name="ipx-feature">
+      <summary class="ipx__summary">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+        <span>Graphic Design</span> 
+      </summary>
+      <div class="ipx__content">
+        <p class="ipx__text">⭐GRAPHIC DESIGN<br> Photoshop |  <a aria-label="Venzon" href="https://www.behance.net/venzonariola1" target="_blank" rel="noreferrer noopener">Behance</a><br>Creating visually engaging posters, banners, backgrounds, and promotional materials. <br>Click to  <a href="https://www.behance.net/gallery/172294425/Graphic-Design-Collection-Vol-1" target="_blank" rel="noreferrer noopener">View Project</a>.</p>
+      </div>
+    </details>
+  </div>
 
-   
-          <div class="pastelBox-container"><!-- Pastel Box Container -->
-          <div class="pastelBox">
-              <p>Graphic Designer who enjoys turning ideas into eye-catching visuals. I create infographics, vector logos, animations, and all sorts of designs mainly for our university's portal and e-learning site.</p>  
-              <br>
-              <div class="row"><p class="bold">Graphic Design Tools:</p><p class="italic">Adobe Photoshop</p></div>
-          </div>
-            </div><!-- Pastel Box Container -->
+  <!-- Images: keep the same order and count (6) as the 5 accordions + 1 cover -->
+  <div class="ipx__col-media">
+    <div class="ipx__block"><div class="ipx__wrap"><div id="canvas-container" class="ipx__img" aria-label="Canvas artwork"></div></div></div>
+    <div class="ipx__block"><div class="ipx__wrap"><img class="ipx__img" src="image/gridimage/uiuxdev.png" alt="" /></div></div> 
+    <div class="ipx__block"><div class="ipx__wrap"><video class="ipx__img" autoplay muted loop playsinline aria-label="Logo animation"><source src="video/logos.mp4" type="video/mp4" /></video></div></div>
+    <div class="ipx__block"><div class="ipx__wrap"><video class="ipx__img" autoplay muted loop playsinline aria-label="Wordpress"><source src="video/wordpress.mp4" type="video/mp4" /></video></div></div>
+    <div class="ipx__block"><div class="ipx__wrap"><video class="ipx__img" autoplay muted loop playsinline aria-label="Infographic"><source src="video/infographic.mp4" type="video/mp4" /></video></div></div>
+    <div class="ipx__block"><div class="ipx__wrap"><video class="ipx__img" autoplay muted loop playsinline aria-label="Mockup"><source src="video/mockup.mp4" type="video/mp4" /></video></div></div>
+    <div class="ipx__block">
+      <div class="ipx__wrap">
+        
+      <!-- START GRAPHIC DESIGN IPHONE TAB -->
+        <div class="sc3d-stage">
+  <!-- Main Carousel Box -->
+  <div class="sc3d-carousel" id="sc3dCarousel">
+
+    <!-- Image Cards (Add or remove cards here) -->
+    <div class="sc3d-card"><img src="image/gridimage/ASICS.png" alt="ASICS"></div>
+    <div class="sc3d-card"><img src="image/gridimage/DODGERS.png" alt="DODGERS"></div>
+    <div class="sc3d-card"><img src="image/gridimage/KAZAKHSTAN.png" alt="KAZAKHSTAN"></div>
+    <div class="sc3d-card"><img src="image/gridimage/NEONOVA.png" alt="NEONOVA"></div>
+    <div class="sc3d-card"><img src="image/gridimage/PERFUME.png" alt="PERFUME"></div>
+    <div class="sc3d-card"><img src="image/gridimage/POSTER.png" alt="POSTER"></div>
+
+  </div>
+</div>
+
+      <!-- END GRAPHIC DESIGN IPHONE TAB -->
+      </div>
+    </div>
+
+  </div>
+
+  <button type="button" class="ipx__btn ipx__btn--next" data-ipx-action="next" aria-hidden="true" tabindex="-1">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" /></svg>
+  </button>
+  <button type="button" class="ipx__btn ipx__btn--prev" data-ipx-action="prev" aria-hidden="true" tabindex="-1">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" /></svg>
+  </button>
+  <button type="button" class="ipx__btn ipx__btn--exit" data-ipx-action="exit" aria-hidden="true" tabindex="-1">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+  </button>
+</div>
+
+            <!--END IPHONE ACCORDION-->
+
             
-          </div><!--END GRAPHIC SECTION-->
-
-
-
-
-
-<!--START WEBDEV SECTION-->
-    <div id="webdev" class="section">
-
-      <center>
-        <div>
-          <h1 style="color: #fd6209; font-size: 3em; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">WEB DEVELOPER</h1>
-          <h2>Front End | UI/UX</2>
-        </div>  
-
-        <div class="containerweb">
-        <!-- Left column (1 tall video) -->       
-        <div class="left">
-          <video src="video/videowordpress.mp4" autoplay muted loop playsinline></video><br>
-         <!-- Pastel Box Container -->
-          <br>
+          <div class="pastelBox-container">
             <div class="pastelBox">
-              <p>This platform functions as an essential open resource collection, meticulously built using a combination of Bootstrap and WordPress (WP-Bakery). Its primary goal is to assist stakeholders by providing readily available information and tools crucial for the successful completion of their research and academic theses.</p>
-          </div>
-          <!-- Pastel Box Container -->
-        </div>
-
-        <!-- Right column (2 stacked videos) -->
-        <div class="right">
-          <video  src="video/XD.mp4" autoplay muted loop playsinline></video>
-          <div id="studentportal"></div>
-          <!-- Pastel Box Container -->
-            <div class="pastelBox">
-              <div  class="title-inline"><b>(WordPress WP-Bakery) Link:</b><a href=" https://asiapjournals.org/" target="_blank" rel="noopener noreferrer"> https://asiapjournals.org/</a></div>
-          </div>
-          <!-- Pastel Box Container -->
-
-            <video  src="video/studentportal.mp4" autoplay muted loop playsinline></video>
-           <!-- Pastel Box Container -->
-            <!-- <div class="pastelBox">
-              <b>(HTML,CSS,JAVA) Link:</b><a href="" target="_blank" rel="noopener noreferrer"> https://students.portal</a></div>
-          </div> -->
-          <!-- Pastel Box Container -->
-
-          <video src="video/portal.mp4" autoplay muted loop playsinline></video>
-          <!-- Pastel Box Container -->
-            <!-- <div class="pastelBox">
-              <b>(PHP, Bootstrap) credentials needed Link:</b><a href=" https://myportal.lpubatangas.edu.ph/" target="_blank" rel="noopener noreferrer"> https://my.portal</a></div>
-          </div> -->
-          <!-- Pastel Box Container -->
-        </div>
-        </div>
-      </center>
-
-        <div class="pastelBox-container"><!-- Pastel Box Container -->
-            <div class="pastelBox">
-              <p>As the university’s Web Developer, I manage the design of our portal and oversee the corporate website, Sustainable Development Goals (SDGs) content, and the new research journal website. My role involves regularly updating these websites to meet the needs of our users.</p>  
+              <p class="bold" style="text-align: center; color: #fd6209;">Graphic Designer | Front-End Web Designer | WordPress Designer</p>
+              <p style="text-align: left;">I create engaging digital experiences through UI/UX design, infographics, vector logos, animations, and graphic design for university portals, e-learning platforms, and digital projects.</p>  
+              <p style="text-align: left;">As a UI/UX and Front-End Web Designer specializing in WordPress, I design, develop, and maintain responsive, user-friendly websites, including university portals, corporate websites, SDG content, and research journal websites, using modern web design practices.</p> 
               <br>
-              <div class="row"><p class="bold">Programming and Development:</p><p class="italic">Bootstrap,PHP, HTML ,PHP ,CSS, Javascript, and XAMPP</p></div>
-              <div class="row"><p class="bold">Graphic Design:</p> <p class="italic">Adobe Photoshop</p></div>
-              <div class="row"><p class="bold">Content Management System:</p> <p class="italic">Wordpress(WP-Bakery), Penpot</p></div>
-              <div class="row"><p class="bold">Web Design Tools / Wireframe:</p> <p class="italic">VS Code, Dreamweaver, Adobe XD, Figma</p></div>
-              <div class="row"><p class="bold">Video Editing:</p> <p class="italic">Filmora</p></div>
-          </div>
-        </div><!-- Pastel Box Container -->
-
-
-      </div><!--END WEBDEV SECTION-->
-
-
-      <div id="ict" class="section"><!--START ICT SECTION-->
-        <center>
-       <div>
-          <h1 style="color: #fd6209; font-size: 3em; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">TECH SUPPORT</h1>
-        </div>
-        </center>
-
-         <div class="pastelBox-container"><!-- Pastel Box Container -->
-          
-
-          <div class="carousel-container">
-            <div class="carousel-track" id="carouselTrack">
-   
-            <div class="slide"><img src="image/techs/1.jpg" alt="Image 1"></div>
-            <div class="slide"><img src="image/techs/11.jpg" alt="Image 2"></div>
-            <div class="slide"><img src="image/techs/9.jpg" alt="Image 3"></div>
-            <div class="slide"><img src="image/techs/16.jpg" alt="Image 4"></div>
-            <div class="slide"><img src="image/techs/2.jpg" alt="Image 5"></div>
-            <div class="slide"><img src="image/techs/12.jpg" alt="Image 6"></div>
-            <div class="slide"><img src="image/techs/20.jpg" alt="Image 7"></div>
-            <div class="slide"><img src="image/techs/14.jpg" alt="Image 8"></div>
-            <div class="slide"><img src="image/techs/17.jpg" alt="Image 9"></div>
-            <div class="slide"><img src="image/techs/18.jpg" alt="Image 10"></div>
-            <div class="slide"><img src="image/techs/19.jpg" alt="Image 11"></div>
-            <div class="slide"><img src="image/techs/3.jpg" alt="Image 12"></div>
-            <div class="slide"><img src="image/techs/4.jpg" alt="Image 13"></div>
-            <div class="slide"><img src="image/techs/23.jpg" alt="Image 14"></div>
-            <div class="slide"><img src="image/techs/22.jpg" alt="Image 15"></div>
-            <div class="slide"><img src="image/techs/6.jpg" alt="Image 16"></div>
-            <div class="slide"><img src="image/techs/10.jpg" alt="Image 17"></div>
-            <div class="slide"><img src="image/techs/8.jpg" alt="Image 18"></div>
-            <div class="slide"><img src="image/techs/7.jpg" alt="Image 19"></div>
-            <div class="slide"><img src="image/techs/15.jpg" alt="Image 20"></div>
-            <div class="slide"><img src="image/techs/21.jpg" alt="Image 21"></div>
-            <div class="slide"><img src="image/techs/5.jpg" alt="Image 22"></div>
-
+             <p class="small" style="text-align: left;"><strong>Web Design & Front-End Development:</strong> <span>HTML · CSS · JavaScript · Bootstrap · Core PHP· Laravel · PHP · XAMPP · Responsive Web Design · UI/UX</span></p>
+            <p class="small" style="text-align: left;"><strong>Graphic Design:</strong> <span>Adobe Photoshop · Infographics · Vector Logo Design · Digital Graphics · Visual Content Creation · Animation</span></p>
+            <p class="small" style="text-align: left;"><strong>UI/UX & Web Design Tools:</strong> <span>Figma · Adobe XD · Penpot · Visual Studio Code · Adobe Dreamweaver · Wireframing · UI Design</span></p>
+           <p class="small" style="text-align: left;"><strong>Video Editing:</strong> <span>Filmora · Basic Video Editing · Motion Graphics</span></p>
             </div>
           </div>
-        
-          <!-- Modal -->
-          <div class="modal" id="imageModal">
-            <span class="modal-close" id="closeModal">&times;</span>
-            <span class="modal-arrow left" id="prevArrow">&#10094;</span>
-            <img id="modalImg" src="" alt="Zoomed image">
-            <span class="modal-arrow right" id="nextArrow">&#10095;</span>
+      </div><!--END GRAPHIC SECTION--> 
+
+      <!--TECHNICAL ICT SECTION-->
+      <div id="ict" class="section">    
+         <!--START SLIDER TECH-->
+        <main>
+        <div id="sliderWrapper" class="slider-wrapper">
+            
+            <!-- Slides Track -->
+            <div id="slidesTrack" class="slides-track">
+                <!-- Dynamic Slides -->
+            </div>
+
+            <!-- Gradient Overlay -->
+            <div class="gradient-overlay"></div>
+
+            <!-- Captions, Zoom Hint, and Autoplay Toggle -->
+            <div class="caption-container">
+                <div class="caption-content">
+                    <span id="slideCategory" class="category-badge">Category</span>
+                    <h2 id="slideTitle" class="slide-title">Slide Title</h2>
+                    <p id="slideDescription" class="slide-desc">Slide description goes here.</p>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="actions-group">
+                    <button id="clickZoomHint" type="button" class="glass-panel action-badge glass-btn">
+                        <svg class="icon-sm text-indigo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <polyline points="9 21 3 21 3 15"></polyline>
+                            <line x1="21" y1="3" x2="14" y2="10"></line>
+                            <line x1="3" y1="21" x2="10" y2="14"></line>
+                        </svg>
+                        <span>Click image to zoom</span>
+                    </button>
+                    <button id="toggleAutoPlayBtn" type="button" class="glass-btn action-badge">
+                        <span id="pausePlayIconContainer">
+                            <svg class="icon-sm text-emerald" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="6" y="4" width="4" height="16"></rect>
+                                <rect x="14" y="4" width="4" height="16"></rect>
+                            </svg>
+                        </span>
+                        <span id="pausePlayText">Pause Autoplay</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows (Inline SVGs guaranteed to load) -->
+            <div class="nav-arrows-container">
+                <button id="prevBtn" type="button" class="glass-btn nav-btn" aria-label="Previous Slide">
+                    <svg class="icon-md" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button id="nextBtn" type="button" class="glass-btn nav-btn" aria-label="Next Slide">
+                    <svg class="icon-md" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Top Counter & Progress Indicator -->
+            <div class="top-bar">
+                <div class="glass-panel counter-badge">
+                    <span id="currentSlideNum">01</span> <span class="counter-divider">/</span> <span id="totalSlidesNum">05</span>
+                </div>
+
+                <div class="progress-container">
+                    <div id="progressBar" class="progress-bar-inner"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div id="dotsContainer" class="dots-container">
+            <!-- Dynamic Dots -->
+        </div>
+    </main>
+     <!--END SLIDER TECH-->
+
+
+  <!-- START SLIDER MODAL -->
+    <div id="lightboxModal" class="lightbox-container">  <!-- Zoom Lightbox Modal -->
+        <div id="lightboxBackdrop" class="lightbox-backdrop"></div>
+
+        <button id="lightboxCloseBtn" type="button" class="glass-btn lightbox-close-btn" aria-label="Close Lightbox">
+            <svg class="icon-md" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+
+        <div class="lightbox-controls">
+            <button id="lightboxPrevBtn" type="button" class="glass-btn nav-btn" aria-label="Previous Image">
+                <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button id="lightboxNextBtn" type="button" class="glass-btn nav-btn" aria-label="Next Image">
+                <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <div class="lightbox-content-box">
+            <img id="lightboxImg" src="" alt="Zoomed view" class="lightbox-img">
+            <div class="lightbox-caption">
+                <h3 id="lightboxTitle" class="lightbox-title">Image Title</h3>
+                <p id="lightboxCounter" class="lightbox-counter">1 of 5</p>
+            </div>
+        </div>
+    </div>
+<!-- END SLIDER MODAL -->
+
+          <div class="pastelBox-container">
+            <div class="pastelBox">
+              <p class="bold" style="text-align: center; color: #fd6209;">Technical Support & IT Operations</p>
+              <p style="text-align: left;">Provide hardware, software, OS, network, and user support; troubleshoot and repair computers, peripherals, and network equipment; perform OS installation, configuration, recovery, upgrades, and preventive maintenance.</p>  
+             <br>
+             <p class="small" style="text-align: left;"><strong>Tools & Technologies:</strong> <span>Windows OS, OS Cloning & Recovery, Cisco, Ruckus, PABX, CCTV/NVR, Fluke Tester, Hardware Diagnostic Tools, Remote Support Tools.</span></p>
+           </div>
           </div>
-        
-
-
-          
-          <div class="pastelBox">
-              <p>Extensive experience in technical support, specializing in computer hardware repair, software troubleshooting, and operating systems, including OS cloning. Possesses foundational knowledge of Windows Server, along with expertise in switch and router configuration. Skilled in printer repair and maintenance, CCTV systems, and network cabling (including UTP and internet cables serving as the backbone to server infrastructure).</p>  
-              <br>
-              <h5>Networking and Configuration:</h5>
-              <p>Experienced in network infrastructure setup, including the configuration and deployment of Ruckus routers and Cisco switches. Proficient in cabling diagnostics using Fluke testers and cable tracers, with expertise in structured cabling and network layout planning for optimal performance and scalability.</p>
-              <br>
-              <h5>Operating Systems:</h5>
-              <p>Extensive experience working with Windows desktop operating systems (XP through 11), as well as Windows Server. Familiar with legacy systems such as Windows Live Essentials and capable of supporting legacy-to-modern system transitions, software compatibility, and system recovery.</p>
-              <br>
-              <h5>Hardware Repair Computer/Laptop:</h5>
-              <p>Skilled in using diagnostic tools for troubleshooting and performance analysis of computer systems. Experienced in the assembly and disassembly of computer hardware, including desktops, laptops, and peripherals. Proficient with tools and equipment for component-level inspection, repair, and replacement.</p>
-              <br>
-              <h5>Printer Management:</h5>
-              <p>Experienced in the assembly and disassembly of Epson printers using specialized tools and equipment. Skilled in diagnosing hardware issues, performing part replacements, and ensuring proper reassembly for optimal printer performance.</p>
-              <br>
-              <h5>CCTV Systems:</h5>
-              <p>Experienced in managing both NVR (Network Video Recorder) and analog CCTV systems, including setup, maintenance, and backup of surveillance footage. Skilled in retrieving, archiving, and securing video data for compliance and incident investigation.</p>
-              <br>
-              <h5>Communication Systems:</h5>
-              <p>Basic knowledge in setting up and handling PABX systems, including connecting lines, setting extensions, and doing simple troubleshooting for office phones.</p>
-              <br>
-              <h5>Simulation Software:</h5>
-              <p>Support for Kongsberg and ARI marine simulators, assisting students during training, setup, and troubleshooting.</p>
-              <br>
-          </div>
-          </div><!-- Pastel Box Container -->
-
-      </div><!--END ICT SECTION-->
+    </div><!--END TECHNICAL SECTION-->
 
         
       <div id="experience" class="section"><!--START EXPERIENCE SECTION-->
-        <center>
-        <div>
-          <h1 style="color: #fd6209; font-size: 3em; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">EXPERIENCE</h1>
-        </div>
-        </center>
+
         <div class="pastelBox-container">
             <div class="pastelBox">
-              <h2>ICT Support Engineer</h2>
-                <p>Managed and maintained network infrastructure, including servers, Ruckus routers, Cisco switches, and structured cabling systems.
-                   Designed and implemented LAN, WAN, and internet-based networks; ensured optimal performance, security, and reliability.
-                   Provided technical support and resolved network, hardware, and software issues across the organization.
-                  Installed, configured, and maintained operating systems (including Windows Server), performed system backups, cloning, and recovery using tools like Windows Live.
-                  Diagnosed and repaired computer and laptop hardware; performed upgrades and system optimization.
-                  Configured and maintained printers using advanced Windows Registry settings; assembled/disassembled units for efficiency and longevity.
-                  Configured and maintained printers using advanced Windows Registry settings; assembled/disassembled units for efficiency and longevity.
-                  Supported maritime training through Kongsberg and ARI simulator operations.
-                  Ensured compliance with security protocols and contributed to disaster recovery planning.
-                </p>
-                <br>
-                 <h2>Web Developer</h2>
-                 <p>
-                  Develop and update websites using HTML, CSS, PHP, and WordPress, integrating functionality enhancements through XAMPP environments.
-                  Collaborate with academic and administrative teams to deliver web solutions aligned with institutional goals.
-                  Design website wireframes and prototypes to visualize user interface and user experience prior to development.
-                  Monitor and maintain multiple websites managed by the department, ensuring functionality, content accuracy, and up-to-date design.
-                  Develop visual concepts and layouts using tools such as Adobe Photoshop, Adobe XD, Figma, and Illustrator for use across web, social media, and print platforms.
-                  Create infographics and visual learning materials to support student education and engagement.
-                 </p>
-                <div class="row"><p class="bold">Tools and Technologies:</p><p class="italic">Bootstrap,HTML, CSS, PHP, WordPress Wp-Bakery, XAMPP,Github, Visual Studio Code, Dreamweaver, Adobe XD, Figma, Penpot.</p></div>    
+                <center>
+         <div>
+          <h1 style="color: #4297f3; font-size: 3em; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Experience</h1>
+        </div>
+         </center>
 
-                 <br>
-                 <br>
-                 <h2>Graphic Artist</h2>
-                 <p>
-                  Design infographics, vector logos, animations, and visual content for the university portal and e-learning platforms to enhance communication and user engagement.
-                  Create visually compelling graphics using Photoshop, Illustrator, and Canva, maintaining brand consistency and accessibility standards.
-                  Edit and produce multimedia content using Filmora for educational and promotional use.
-                 </p>
-                <div class="row"><p class="bold">Design Tools:</p><p class="italic">Photoshop, Canva, Filmora.</p></div>
+
+               <!--START BASIC ACCORDION-->
+                 <div class="accordion-wrapper">
+    <div class="accordion-container">
+      
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="accordion-header-left" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+            <img src="image/icons/code.png" alt="Profile" class="accordion-avatar" />
+            <div style="text-align: center; width: 100%;">
+              <h4 style="margin: 0;">Frontend Web Developer | UI/UX & Graphic Designer</h4>
+            </div>
+          </div>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+
+        <div class="accordion-content">
+          <div class="accordion-body">
+            <br>
+             <p><strong>Web Development</strong></p>
+             <p>Develop responsive websites and web-based platforms using HTML, CSS, JavaScript, PHP, Bootstrap, Core PHP, Laravel, focusing on modern front-end design, usability, and responsiveness.</p><br>
+              <p><strong>Applications & Portal Modernization</strong></p>
+              <p>Improve internal portal UI/UX through user-flow analysis, wireframes, interactive prototypes, and modern front-end development using PHP, Bootstrap, Core PHP, Laravel, HTML, CSS, and JavaScript.</p><br>
+              <p><strong>WordPress Administration</strong></p>
+              <p>Manage and maintain WordPress websites, including content, themes, plugins, layouts, Elementor, WPBakery, and front-end customization. Perform updates, troubleshooting, and website optimization.</p><br>
+              <p><strong>UI/UX Design</strong></p>
+              <p>Create responsive wireframes, interactive prototypes, dashboards, and UI components using Figma, Adobe XD, HTML, CSS, JavaScript, Bootstrap,Core PHP, Laravel.</p><br>
+              <p><strong>Institutional Web Projects</strong></p>
+              <p>Manage university websites and digital platforms, including the corporate website, SDG initiatives, research journal, and student portal interfaces.</p><br>
+              <p><strong>Digital Media & Branding</strong></p>
+              <p>Create logos, branding materials, infographics, layouts, and digital graphics using Adobe Photoshop.</p><br>
+              <p><strong>Collaboration & Maintenance</strong></p>
+              <p>Partnered with academic and administrative departments to deliver user-centered web solutions aligned with institutional goals and user requirements.</p><br>
+
+            </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+          <div class="accordion-header-left" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+            <img src="image/icons/techicon.png" alt="Profile" class="accordion-avatar" />
+            <div style="text-align: center; width: 100%;">
+              <h4 style="margin: 0;">Technical Support Specialist</h4>
+            </div>
+          </div>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+
+       
+        <div class="accordion-content">
+          <div class="accordion-body">
+            <br>
+           <p><strong>Technical Support & User Assistance</strong></p>
+           <p>Provide technical support and troubleshooting for hardware, software, operating systems, applications, and user-related technical issues. Diagnose problems, implement solutions, and assist users with technical concerns.</p><br>
+           <p><strong>Collaboration & Maintenance</strong></p>
+           <p>Diagnose and resolve desktop, laptop, printer, peripheral, and software issues. Replace defective hardware components and perform hardware upgrades and repairs when required.</p><br>
+           <p><strong>Network & Server Support </strong></p>
+           <p>Perform network and server installation, troubleshooting, and configuration, including backbone and server cabling, LAN setup, switch configuration, and server deployment. Knowledgeable in PABX telephone systems, CCTV systems, NVR, and analog surveillance equipment.</p><br>
+           <p><strong>System Installation & Configuration</strong></p>
+           <p>Install and configure operating systems, software applications, drivers, and computer peripherals. Perform system cloning, OS recovery, reinstallation, and supported OS access-recovery or bypass procedures.</p><br>
+           <p><strong>Preventive Maintenance</strong></p>
+           <p>Perform preventive maintenance and technical inspections for computers, servers, network equipment, simulators, and laboratory equipment to ensure reliability and minimize downtime.</p><br>
+          
           </div>
         </div>
+      </div>
+
+    </div>
+  </div>
+               <!--END BASIC ACCORDION-->
+            </div>
+       </div>
       </div><!--END EXPERIENCE SECTION-->
 
     <!--START PROJECT SECTION-->
       <div id="projects" class="section">
-        <center>
-        <div>
-          <h1 style="color: #fd6209; font-size: 3em; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">PROJECTS</h1>
-        </div>
-        </center>
-        <div class="pastelBox-container">
+
+          <div class="pastelBox-container">
             <div class="pastelBox">
-             
-            
-              <!--START ACCORDION STYLE-->
- <div class="wrap">
-      <ul class="accordion">
-      
-      <!-- 1 Accordion -->  
-        <li class="accordion__item">
-          <a class="accordion__title" href="javascript:void(0)"
-            >Asia Pacific Journals Website
-            <div class="bmenu x7">
-              <span class="btop"></span><span class="bmid"></span
-              ><span class="bbot"></span>
-            </div>
-          </a>
-          <div class="accordion__content">
-            
-            <div class="row"><p class="bold">Institution:</p><p>Lyceum of the Philippines University – Batangas</p></div>
-                  <div class="row"><p class="bold">Link:</p><a href="https://asiapjournals.org/" target="_blank" rel="noopener noreferrer">asiapjournals.org/</a></p></div>
-                  <div class="row"><p class="bold">Role:</p><p>Web Developer / UI/UX Designer</p></div>
-                  <br>
 
-                <p>Designed and managed a research journal platform to improve accessibility and dissemination of academic publications. Utilized WordPress and WPBakery to create a responsive, user-friendly interface with clear content structure and intuitive navigation.
-Improved usability and readability of journal articles while ensuring consistency with academic and institutional standards.
-                </p>  
-                <div class="row"><p class="bold">Tools:</p><p>Wordpress Wp-bakery,Adobe XD,Photoshop,HTML,CSS</p></div>
-          </div>
-        </li>
-        
-        
-        <!-- 2 Accordion -->
-          <li class="accordion__item">
-          <a class="accordion__title" href="javascript:void(0)"
-            >Corporate Website
-            <div class="bmenu x7">
-              <span class="btop"></span><span class="bmid"></span
-              ><span class="bbot"></span>
-            </div>
-          </a>
-          <div class="accordion__content">
-            <div class="row"><p class="bold">Institution:</p><p>Lyceum of the Philippines University – Batangas</p></div>
-             <div class="row"><p class="bold">Link:</p><a href="https://lpubatangas.edu.ph/" target="_blank" rel="noopener noreferrer">lpubatangas.edu.ph/</a></div>
-<!-- Preview Link -->
-<div>
-  <b>Preview:</b>
-  <i>
-    <a href="https://www.behance.net/gallery/224281205/WordPress-Website-Development-WPBakery" target="_blank" rel="noopener noreferrer">
-     Behance Portfolio
-    </a>
-  </i>
-</div>
-
-                <div class="row"><p class="bold">Role:</p><p>Web Developer / UI/UX Designer</p></div>
-                  <br>
-  
-                <p>Enhanced and maintained the university’s corporate website to improve user experience, accessibility, and responsiveness. Developed structured layouts and optimized navigation to enhance overall usability and user engagement. Contributed to the development and continuous improvement of the University’s Sustainable Development Goals (SDG) web pages, ensuring alignment with institutional objectives and global standards. Supported cybersecurity and data privacy initiatives in coordination with the Data Protection Officer (DPO), reinforcing compliance with data protection policies and best practices.
-                </p>  
-                <div class="row"><p class="bold">Tools:</p><p>Wordpress Wp-bakery,Adobe XD,Photoshop,HTML.CSS</p></div>
-          </div>
-        </li>
-        
-        
-        
-                <!-- 3 Accordion -->
-          <li class="accordion__item">
-          <a class="accordion__title" href="javascript:void(0)"
-            >Development and Enhancement
-            <div class="bmenu x7">
-              <span class="btop"></span><span class="bmid"></span
-              ><span class="bbot"></span>
-            </div>
-          </a>
-          <div class="accordion__content">
-             <div class="row"><p class="bold">Institution:</p><p>Lyceum of the Philippines University – Batangas</p></div>
-                  <div class="row"><p class="bold">Student Portal: </p><i><a href="#studentportal">Preview</a></i></div>      
-                 <div class="row"><p class="bold">MyPortal Dashboard Redesign: </p><i><a href="https://www.behance.net/gallery/224448855/Web-Portal" target="_blank" rel="noopener noreferrer">Preview</a></i></div>
-                 <div class="row"><p class="bold">Attendance System: </p><i><a href="https://www.behance.net/gallery/224201399/Attendance-Tracking-System" target="_blank" rel="noopener noreferrer">Preview</a></i></div>
-                  <div class="row"><p class="bold">Role:</p><p>Web Developer / UI/UX Designer</p></div>
-                  <br>
-                <p>
-				Developed and enhanced legacy systems to improve performance, functionality, and user experience. Modernized existing features, optimized system workflows, and ensured compatibility with current technologies while maintaining system stability and data integrity.
-                </p>  
-                <div class="row"><p class="bold">Programming:</p><p>VS Code,Github,Copilot,Bootstrap,PHP,HTML,CSS,JAVA</p></div>
-          </div>
-        </li>
-        
-           <!-- 4 Accordion -->
-          <li class="accordion__item">
-          <a class="accordion__title" href="javascript:void(0)"
-            >Network Cabling Infrastructure and IT Equipment Modernization
-            <div class="bmenu x7">
-              <span class="btop"></span><span class="bmid"></span
-              ><span class="bbot"></span>
-            </div>
-          </a>
-          <div class="accordion__content">
-                        <div class="row"><p class="bold">Institution:</p><p>Lyceum of the Philippines University – Batangas</p></div>
-                  <div class="row"><p class="bold">Project:</p><p>Upgrade the IT Infrastructure</p></div> 
-                 <div class="row"><p class="bold">Role:</p><p>Technical Support</p></div>
-                 <br>
-
-                <p>
-Replaced and upgraded legacy network cabling to enhance connectivity, system stability, and performance. Performed structured cabling, termination, and diagnostics using Fluke testers and cable tracers. Worked closely with IT and facilities teams to minimize operational disruption during infrastructure replacement. Assisted in switch/router reconfiguration post-installation to ensure optimal network functionality. Upgraded IT equipment across multiple departments and laboratories, including the deployment of new workstations, printers, and network devices, ensuring compatibility with the enhanced infrastructure and improving overall user productivity.
-                </p>  
-               <!-- <div><b>Programing:</b><i>Bootstrap,PHP,CSS,JAVA</i></div> -->
-          </div>
-        </li>
-        
-        
-        
-      </ul>
-    </div>
-    <!--END ACCORDION STYLE-->
-
-
-
-
-
-          </div>
-        </div>
-      </div><!--END PROJECT SECTION-->
-
-
-
-
-
-
-
-
-
-
-      <div id="trainings" class="section"><!--START TRAININGS SECTION-->
-         <center>
+<center>
          <div>
-          <h1 style="color: #fd6209; font-size: 3em; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">TRAININGS</h1>
+          <h1 style="color: #4297f3; font-size: 3em; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Projects</h1>
         </div>
          </center>
-              <br><br>
-              <center>
-              <div class="apj-tab-wrapper">
-                 <div class="apj-tab-container">
-                      <a href="#content1" class="tab"><img src="image/tab/tebtechnical.png" alt="Tab 1" width="200" height="50"></a>
-                     <a href="#content2" class="tab"><img src="image/tab/graphic.png" alt="Tab 2" width="200" height="50"></a>
-                     <a href="#content3" class="tab"><img src="image/tab/webdev.png" alt="Tab 3" width="200" height="50"></a>
-                </div>
 
-                <div class="apj-tab-content"> 
-                     <div id="content1"><!-- TECHNICAL TAB 1 -->
-                     <br>
-                    <h3>Click a thumbnail to open the PDF</h3>
-                       <br>
-                    <div class="pdfnav1-marquee-container">
-                     <div class="pdfnav1-marquee-track">
-                          <img class="pdfnav1-thumbnail" src="pdf/certificate/2025/Operating Systems and You Becoming a Power.jpg" data-pdf="pdf\certificate\2025\Operating Systems and You Becoming a Power User.pdf" alt="PDF 1" />
-                           <img class="pdfnav1-thumbnail" src="pdf/certificate/2025/Technical Support Fundamentals.jpg" data-pdf="pdf\certificate\2025\Technical Support Fundamentals.pdf" alt="PDF 2" />
-                           <img class="pdfnav1-thumbnail" src="pdf/certificate/2025/The Bits and Bytes of Computer Networking.jpg" data-pdf="pdf\certificate\2025\The Bits and Bytes of Computer Networking.pdf" alt="PDF 3" />
-                           <img class="pdfnav1-thumbnail" src="pdf/certificate/2025/System Administration and IT Infrastructure.jpg" data-pdf="pdf\certificate\2025\System Administration and IT Infrastructure.pdf" alt="PDF 4" />
-                            <img class="pdfnav1-thumbnail" src="pdf/certificate/2024/IntroductiontoCybersecurity.jpg" data-pdf="pdf\certificate\2024\IntroductiontoCybersecurity.pdf" alt="PDF 5" />
-                            <img class="pdfnav1-thumbnail" src="pdf/certificate/2025/IT Security Defense against the digital dark arts.jpg" data-pdf="pdf\certificate\2025\IT Security Defense against the digital dark arts.pdf" alt="PDF 5" />
-                            <img class="pdfnav1-thumbnail" src="pdf/certificate/2025/Google IT Support.jpg" data-pdf="pdf\certificate\2025\Google IT Support.pdf" alt="PDF 7" />
-                       </div>
-                     </div>
+              <!--START BASIC ACCORDION -->
+<div class="accordion-wrapper">
+    <div class="accordion-container">   
+      <div class="accordion-item">
+    <button class="accordion-header" aria-expanded="false">
+          <div class="accordion-header-left" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+            <img src="image/icons/arrowicon.png" alt="Profile" class="accordion-avatar" />
+            <div style="text-align: center; width: 100%;">
+              <h4 style="margin: 0;">Key Achievements & Deliverables</h4>
+            </div>
+          </div>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
 
-                     <!-- Popup Overlay -->
-                    <div id="pdfnav1-popupOverlay">
-                     <div id="pdfnav1-popupContent">
-                     <button id="pdfnav1-closeBtn" title="Close popup">&times;</button>
-                      <button id="pdfnav1-prevBtn" class="pdfnav1-nav-button" title="Previous PDF">&#9664;</button>
-                       <button id="pdfnav1-nextBtn" class="pdfnav1-nav-button" title="Next PDF">&#9654;</button>
-                      <iframe id="pdfnav1-pdfFrame" src=""></iframe>
-                </div>
+      
+        <div class="accordion-content">
+          <div class="accordion-body"> 
+            <br>
+             <p><strong>Internal Portal Modernization & UI/UX Redesign</strong></p>   
+              <p>Modernized internal portals to deliver improved usability, navigation, visual consistency, and cross-device responsiveness for stakeholders, using user-flow analysis, prototyping, and responsive development with PHP, HTML, CSS, JavaScript, Bootstrap, Core PHP, Laravel.</p>
+             <p><a href="https://www.behance.net/gallery/171927149/WEB-DESIGNER-FRONT-END-DEVELOPER" target="_blank" rel="noopener noreferrer">https://www.behance.net/gallery/171927149/WEB-DESIGNER-FRONT-END-DEVELOPER</a></p><br>
+             
+             <p><strong>University Website & Asia Pacific Journals Website </strong></p>   
+              <p>Developed and maintained responsive WordPress websites, managing themes, plugins, Rank Math SEO, performance, and content, including the university’s SDG initiatives and academic journal platform.</p>
+             <p><a href="https://www.behance.net/gallery/224281205/WordPress-Website-Development" target="_blank" rel="noopener noreferrer">https://www.behance.net/gallery/224281205/WordPress-Website-Development</a></p>
+             <p><a href="https://asiapjournals.org" target="_blank" rel="noopener noreferrer">https://asiapjournals.org</a></p>
+             <p><a href="https://lpubatangas.edu.ph" target="_blank" rel="noopener noreferrer">https://lpubatangas.edu.ph</a></p><br>
+            
+              <p><strong>Student Portal Interface Redesign </strong></p>   
+              <p>Redesigned the student portal login interface to improve responsiveness, accessibility, usability, and overall user experience across devices.</p>
+             <p><a href="https://students.lpubatangas.edu.ph/Students/Login.php" target="_blank" rel="noopener noreferrer">https://students.lpubatangas.edu.ph/Students/Login.php</a></p><br>
+
+             <p><strong>Enterprise IT Infrastructure Upgrade </strong></p>   
+              <p>Upgraded university network infrastructure, IT equipment, and systems through network configuration, OS updates, hardware replacement, and adoption of new technologies across laboratories, simulators, and other IT facilities</p>
+             <p><a href="https://venzzone.github.io/portfolio/#ict">https://venzzone.github.io/portfolio/#ict</a></p><br>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!--END BASIC ACCORDION -->
+               
             </div>
          </div>
-    
-
-            <div id="content2"> <!-- GRAPHIC TAB 2 -->
-                 <br>
-                  <h3>Click a thumbnail to open the PDF</h3>
-                    <br>
-                   <div class="pdfnav2-marquee-container">
-                    <div class="pdfnav2-marquee-track">
-                   <img class="pdfnav2-thumbnail" src="pdf/certificate/2025/1Design Fundamentals.jpg" data-pdf="pdf\certificate\2025\1Design Fundamentals.pdf" alt="PDF 1" />
-                   <img class="pdfnav2-thumbnail" src="pdf/certificate/2025/2Generative AI Content Creation.jpg" data-pdf="pdf\certificate\2025\2Generative AI Content Creation.pdf" alt="PDF 2" />
-                   <img class="pdfnav2-thumbnail" src="pdf/certificate/2025/3Image Editing.jpg" data-pdf="pdf\certificate\2025\3Image Editing.pdf" alt="PDF 3" />
-                    <img class="pdfnav2-thumbnail" src="pdf/certificate/2025/4Graphic Design.jpg" data-pdf="pdf\certificate\2025\4Graphic Design.pdf" alt="PDF 4" />
-                   <img class="pdfnav2-thumbnail" src="pdf/certificate/2025/5Adobe Graphic Designer.jpg" data-pdf="pdf\certificate\2025\5Adobe Graphic Designer.pdf" alt="PDF 5" />
-                  <img class="pdfnav2-thumbnail" src="pdf/certificate/2025/Document Design.jpg" data-pdf="pdf\certificate\2025\Document Design.pdf" alt="PDF 5" />
-                 </div>
-            </div>
-
-              <!-- Popup Overlay -->
-                <div id="pdfnav2-popupOverlay">
-                   <div id="pdfnav2-popupContent">
-                    <button id="pdfnav2-closeBtn" title="Close popup">&times;</button>
-                    <button id="pdfnav2-prevBtn" class="pdfnav2-nav-button" title="Previous PDF">&#9664;</button>
-                    <button id="pdfnav2-nextBtn" class="pdfnav2-nav-button" title="Next PDF">&#9654;</button>
-                    <iframe id="pdfnav2-pdfFrame" src=""></iframe>
-                   </div>
-                </div>
-     
-    
-    </div>
-
-                <div id="content3"> <!-- WEB DEV TAB 3 -->
-                    <br>
-                   <h3>Click a thumbnail to open the PDF</h3>
-                    <br>
-                  <div class="pdfnav3-marquee-container">
-                  <div class="pdfnav3-marquee-track">
-                   <img class="pdfnav3-thumbnail" src="pdf/certificate/2023/Building Test Automation Framework using.jpg" data-pdf="pdf\certificate\2023\Building Test Automation Framework using.pdf" alt="PDF 1" />
-                   <img class="pdfnav3-thumbnail" src="pdf/certificate/2023/Gen AI.jpg" data-pdf="pdf\certificate\2023\GenAI.pdf" alt="PDF 2" />
-                   <img class="pdfnav3-thumbnail" src="pdf/certificate/2024/Google UX Design.jpg" data-pdf="pdf\certificate\2024\Certificate 7 Google UX Design.pdf" alt="PDF 3" />
-                   <img class="pdfnav3-thumbnail" src="pdf/certificate/2023/1.Foundations of User Experience (UX) Design.jpg" data-pdf="pdf\certificate\2023\1.Foundations of User Experience (UX) Design.pdf" alt="PDF 4" />
-                    <img class="pdfnav3-thumbnail" src="pdf/certificate/2023/2.Start the UX Design Process Empathize, Define.jpg" data-pdf="pdf\certificate\2023\2.Start the UX Design Process Empathize, Define.pdf" alt="PDF 5" />
-                    <img class="pdfnav3-thumbnail" src="pdf/certificate/2023/3.Build Wireframes and Low-Fidelity Prototypes.jpg" data-pdf="pdf\certificate\2023\3.Build Wireframes and Low-Fidelity Prototypes.pdf" alt="PDF 6" />
-                   <img class="pdfnav3-thumbnail" src="pdf/certificate/2024/4.Conduct UX Research and Test Early Concepts.jpg" data-pdf="pdf\certificate\2024\4.Conduct UX Research and Test Early Concepts.pdf" alt="PDF 7" />
-                    <img class="pdfnav3-thumbnail" src="pdf/certificate/2024/5.Create High-Fidelity Designs and Prototypes in.jpg" data-pdf="pdf\certificate\2024\5.Create High-Fidelity Designs and Prototypes in.pdf" alt="PDF 8" />
-                   <img class="pdfnav3-thumbnail" src="pdf/certificate/2024/6.Build Dynamic User Interfaces.jpg" data-pdf="pdf\certificate\2024\6.Build Dynamic User Interfaces.pdf" alt="PDF 9" />
-                  <img class="pdfnav3-thumbnail" src="pdf/certificate/2024/7.Design a User Experience for Social Good.jpg" data-pdf="pdf\certificate\2024\7.Design a User Experience for Social Good.pdf" alt="PDF 10" />
-                  <img class="pdfnav3-thumbnail" src="pdf/certificate/2025/System Administration and IT Infrastructure.jpg" data-pdf="pdf\certificate\2025\System Administration and IT Infrastructure.pdf" alt="PDF 11" />
-               </div>
-              </div>
-
-          <!-- Popup Overlay -->
-            <div id="pdfnav3-popupOverlay">
-             <div id="pdfnav3-popupContent">
-              <button id="pdfnav3-closeBtn" title="Close popup">&times;</button>
-              <button id="pdfnav3-prevBtn" class="pdfnav3-nav-button" title="Previous PDF">&#9664;</button>
-               <button id="pdfnav3-nextBtn" class="pdfnav3-nav-button" title="Next PDF">&#9654;</button>
-              <iframe id="pdfnav3-pdfFrame" src=""></iframe>
-             </div>
-            </div>
-     
-    
-          </div>
-      
       </div>
-  </center>
-      <div class="pastelBox-container">
-            <div class="pastelBox">
-               <p>Over the course of my career, I have participated in a diverse range of training programs to continuously enhance my technical and creative skills. These trainings have equipped me with up-to-date knowledge, practical techniques, and best practices in my fields of work, including IT support, web development, UI/UX design, and graphic arts. Below is a summary of the key training programs I have completed.</p>
-            </div>
+    <!--END PROJECT SECTION-->
 
+    <!--START TRAININGS SECTION-->
+    <div id="trainings" class="section">
+        
+        <!--START TAB CERTIFICATE -->
+        <div class="cert-widget" data-theme="auto" data-accent="#4297f3" data-autoplay="3800" data-gap="20" data-per-view="1,2,3" data-subtitle="Official verified credential">
+
+  <!-- ========== CATEGORY: Graphic ========== -->
+  <div class="cert-category" data-name="Graphic" data-icon="palette">
+
+    <!-- Card 1 -->
+    <a class="cert-card" href="assets/pdf/graphic-certi/1Design Fundamentals.pdf">
+      <img src="assets/pdf/graphic-certi/1Design Fundamentals.jpg" alt="UI/UX Design Systems Architecture">
+      <span class="cert-title">Design Fundamentals</span>
+      <span class="cert-meta">Adobe/Coursera • 2025</span>
+    </a>
+
+    <!-- Card 2 -->
+    <a class="cert-card" href="assets/pdf/graphic-certi/2Generative AI Content Creation.pdf">
+      <img src="assets/pdf/graphic-certi/2Generative AI Content Creation.jpg" alt="Generative AI Content Creation">
+      <span class="cert-title">Generative AI Content Creation</span>
+      <span class="cert-meta">Adobe/Coursera • 2025</span>
+    </a>
+
+    <!-- Card 3 -->
+    <a class="cert-card" href="assets/pdf/graphic-certi/3Image Editing.pdf">
+      <img src="assets/pdf/graphic-certi/3Image Editing.jpg" alt="Image Editing">
+      <span class="cert-title">Image Editing</span>
+      <span class="cert-meta">Adobe/Coursera • 2025</span>
+    </a>
+
+    <!-- Card 4 -->
+    <a class="cert-card" href="assets/pdf/graphic-certi/4Graphic Design.pdf">
+      <img src="assets/pdf/graphic-certi/4Graphic Design.jpg" alt="Graphic Design">
+      <span class="cert-title">Graphic Design</span>
+      <span class="cert-meta">Adobe/Coursera • 2025</span>
+    </a>
+ 
+   <!-- Card 5 -->
+     <a class="cert-card" href="assets/pdf/graphic-certi/5Document Design.pdf">
+      <img src="assets/pdf/graphic-certi/5Document Design.jpg" alt="Document Design">
+      <span class="cert-title">Document Design</span>
+      <span class="cert-meta">Adobe/Coursera • 2025</span>
+    </a> 
+
+    <!-- Card 6 -->
+   <a class="cert-card" href="assets/pdf/graphic-certi/Adobe Graphic Designer.pdf">
+      <img src="assets/pdf/graphic-certi/Adobe Graphic Designer.jpg" alt="Adobe Graphic Designer">
+      <span class="cert-title">Adobe Graphic Designer</span>
+      <span class="cert-meta">Adobe/Coursera • 2025</span>
+    </a>
+
+    <!-- Card  -->
+   <a class="cert-card" href="assets/pdf/graphic-certi/Use Canva to Create Social Media Visuals for Business.pdf">
+      <img src="assets/pdf/graphic-certi/Use Canva to Create Social Media Visuals forBusiness.jpg" alt="Use Canva to Create Social Media Visuals for Business">
+      <span class="cert-title">Use Canva to Create Social Media Visuals for Business</span>
+      <span class="cert-meta">Coursera • 2025</span>
+    </a>
+
+    <!-- Card  -->
+   <a class="cert-card" href="assets/pdf/graphic-certi/Fundamentals of Graphic Design.pdf">
+      <img src="assets/pdf/graphic-certi/Fundamentals of Graphic Design.jpg" alt="Fundamentals of Graphic Design">
+      <span class="cert-title">Fundamentals of Graphic Design</span>
+      <span class="cert-meta">Calart/Coursera • 2026</span>
+    </a>
+   
+  </div> 
+
+  <!-- ========== CATEGORY: Technical ========== -->
+  <div class="cert-category" data-name="Technical" data-icon="cpu">
+
+    <!-- Card 2 -->
+    <a class="cert-card" href="assets/pdf/tech-certi/Building Test Automation Framework using.pdf">
+      <img src="assets/pdf/tech-certi/Building Test Automation Framework using.jpg" alt="Cybersecurity Systems &amp; Defense">
+      <span class="cert-title">Building Test Automation Framework</span>
+      <span class="cert-meta">Coursera • 2024</span>
+    </a> 
+
+     <!-- Card 7 -->
+    <a class="cert-card" href="assets/pdf/tech-certi/IntroductiontoCybersecurity.pdf">
+      <img src="assets/pdf/tech-certi/IntroductiontoCybersecurity.jpg" alt="Introduction to Cybersecurity">
+      <span class="cert-title">Introduction to Cybersecurity</span>
+      <span class="cert-meta">Cisco • 2024</span>
+    </a>
+
+    <!-- Card 1 -->
+    <a class="cert-card" href="assets/pdf/tech-certi/The Bits and Bytes of Computer Networking.pdf">
+      <img src="assets/pdf/tech-certi/The Bits and Bytes of Computer Networking.jpg" alt="The Bits and Bytes of Computer Networking">
+      <span class="cert-title">The Bits and Bytes of Computer Networking</span>
+      <span class="cert-meta">Google/Coursera • 2025</span>
+    </a>
+
+
+    <!-- Card 3 -->
+    <a class="cert-card" href="assets/pdf/tech-certi/Technical Support Fundamentals.pdf">
+      <img src="assets/pdf/tech-certi/Technical Support Fundamentals.jpg" alt="Technical Support Fundamentals">
+      <span class="cert-title">Technical Support Fundamentals</span>
+      <span class="cert-meta">Google/Coursera • 2025</span>
+    </a>
+ 
+    <!-- Card 4 -->
+    <a class="cert-card" href="assets/pdf/tech-certi/System Administration and IT Infrastructure.pdf">
+      <img src="assets/pdf/tech-certi/System Administration and IT Infrastructure.jpg" alt="System Administration and IT Infrastructure">
+      <span class="cert-title">System Administration and IT Infrastructure</span>
+      <span class="cert-meta">Google/Coursera • 2025</span>
+    </a>
+
+    <!-- Card 5 -->
+    <a class="cert-card" href="assets/pdf/tech-certi/Operating Systems and You Becoming a Power User.pdf">
+      <img src="assets/pdf/tech-certi/Operating Systems and You Becoming a Power.jpg" alt="Operating Systems and You Becoming a Power User">
+      <span class="cert-title">Operating Systems and You Becoming a Power User</span>
+      <span class="cert-meta">Google/Coursera • 2025</span>
+    </a>
+
+    <!-- Card 6 -->
+    <a class="cert-card" href="assets/pdf/tech-certi/IT Security Defense against the digital dark arts.pdf">
+      <img src="assets/pdf/tech-certi/IT Security Defense against the digital dark arts.jpg" alt="IT Security Defense against the digital dark arts">
+      <span class="cert-title">IT Security Defense against the digital dark arts</span>
+      <span class="cert-meta">Google/Coursera • 2025</span>
+    </a>
+
+
+    <!-- Card 8 -->
+    <a class="cert-card" href="assets/pdf/tech-certi/Google IT Support.pdf">
+      <img src="assets/pdf/tech-certi/Google IT Support.jpg" alt="Google IT Support">
+      <span class="cert-title">Google IT Support</span>
+      <span class="cert-meta">Google/Coursera • 2025</span>
+    </a>
+
+    <!-- Card  -->
+    <a class="cert-card" href="assets/pdf/tech-certi/Foundations of Cybersecurity.pdf">
+      <img src="assets/pdf/tech-certi/Foundations of Cybersecurity.jpg" alt="Foundation of Cybersecurity">
+      <span class="cert-title">Foundation of Cybersecurity</span>
+      <span class="cert-meta">Google/Coursera • 2025</span>
+    </a>
+
+    <!-- Card  -->
+    <a class="cert-card" href="assets/pdf/tech-certi/Cybersecurity.pdf">
+      <img src="assets/pdf/tech-certi/Cybersecurity.jpg" alt="Cybersecurity">
+      <span class="cert-title">Cybersecurity</span>
+      <span class="cert-meta">ADB Institute • 2026</span>
+    </a>
+
+  </div>
+
+  <!-- ========== CATEGORY: Web Dev ========== -->
+  <div class="cert-category" data-name="Web Dev" data-icon="code">
+
+    <!-- Card 1 -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/1.Foundations of User Experience (UX) Design.pdf">
+      <img src="assets/pdf/webdev-certi/1.Foundations of User Experience (UX) Design.jpg" alt="Foundations of User Experience (UX) Design">
+      <span class="cert-title">Foundations of User Experience (UX) Design</span>
+      <span class="cert-meta">Google/Coursera • 2022</span>
+    </a>
+
+    <!-- Card 2 -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/2.Start the UX Design Process Empathize, Define.pdf">
+      <img src="assets/pdf/webdev-certi/2.Start the UX Design Process Empathize, Define.jpg" alt="Start the UX Design Process Empathize, Define">
+      <span class="cert-title">Start the UX Design Process Empathize, Define</span>
+      <span class="cert-meta">Google/Coursera • 2023</span>
+    </a>
+
+    <!-- Card 3 -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/3.Build Wireframes and Low-Fidelity Prototypes.pdf">
+      <img src="assets/pdf/webdev-certi/3.Build Wireframes and Low-Fidelity Prototypes.jpg" alt="Build Wireframes and Low-Fidelity Prototypes">
+      <span class="cert-title">Build Wireframes and Low-Fidelity Prototypes</span>
+      <span class="cert-meta">Google/Coursera • 2023</span>
+    </a>
+
+    
+    <!-- Card 4 -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/4.Conduct UX Research and Test Early Concepts.pdf">
+      <img src="assets/pdf/webdev-certi/4.Conduct UX Research and Test Early Concepts.jpg" alt="Conduct UX Research and Test Early Concepts">
+      <span class="cert-title">Conduct UX Research and Test Early Concepts</span>
+      <span class="cert-meta">Google/Coursera • 2024</span>
+    </a>
+
+    <!-- Card 5 -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/5.Create High-Fidelity Designs and Prototypes in.pdf">
+      <img src="assets/pdf/webdev-certi/5.Create High-Fidelity Designs and Prototypes in.jpg" alt="Create High-Fidelity Designs and Prototypes in">
+      <span class="cert-title">Create High-Fidelity Designs and Prototypes in</span>
+      <span class="cert-meta">Google/Coursera • 2024</span>
+    </a>
+
+    <!-- Card 6 -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/6.Build Dynamic User Interfaces.pdf">
+      <img src="assets/pdf/webdev-certi/6.Build Dynamic User Interfaces.jpg" alt="Build Dynamic User Interfaces">
+      <span class="cert-title">Build Dynamic User Interfaces</span>
+      <span class="cert-meta">Google/Coursera • 2024</span>
+    </a>
+
+    
+    <!-- Card 7 -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/7.Design a User Experience for Social Good.pdf">
+      <img src="assets/pdf/webdev-certi/7.Design a User Experience for Social Good.jpg" alt="Design a User Experience for Social Good">
+      <span class="cert-title">Design a User Experience for Social Good</span>
+      <span class="cert-meta">Google/Coursera • 2024</span>
+    </a>
+
+    <!-- Card 8 -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/8Google UX Design.pdf">
+      <img src="assets/pdf/webdev-certi/8Google UX Design.jpg" alt="Google UX Design">
+      <span class="cert-title">Google UX Design</span>
+      <span class="cert-meta">Google/Coursera • 2024</span>
+    </a>
+
+    <!-- Card 9 -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/9GenAI.pdf">
+      <img src="assets/pdf/webdev-certi/9Gen AI.jpg" alt="Generative AI">
+      <span class="cert-title">Generative AI</span>
+      <span class="cert-meta">Google/Coursera • 2024</span>
+    </a>
+
+    <!-- Card -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/WordPress 101.pdf">
+      <img src="assets/pdf/webdev-certi/WordPress 101.jpg" alt="WordPress 101">
+      <span class="cert-title">WordPress 101</span>
+      <span class="cert-meta">Packt/Coursera • 2025</span>
+    </a>
+
+    <!-- Card -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/Advanced WordPress Development Techniques.pdf">
+      <img src="assets/pdf/webdev-certi/Advanced WordPress Development Techniques.jpg" alt="Advanced WordPress Development Techniques">
+      <span class="cert-title">Advanced WordPress Development Techniques</span>
+      <span class="cert-meta">Packt/Coursera • 2026</span>
+    </a>
+    
+    <!-- Card -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/Build and Configure an Ecommerce Website UsingWordPress.pdf">
+      <img src="assets/pdf/webdev-certi/Build and Configure an Ecommerce Website UsingWordPress.jpg" alt="Build and Configure an Ecommerce Website UsingWordPress">
+      <span class="cert-title">Build and Configure an Ecommerce Website UsingWordPress</span>
+      <span class="cert-meta">EDUCBA/Coursera • 2026</span>
+    </a>
+    
+    <!-- Card -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/Create Your First WordPress Plugin & Build a WP site.pdf">
+      <img src="assets/pdf/webdev-certi/Create Your First WordPress Plugin & Build a WP site.jpg" alt="Create Your First WordPress Plugin & Build a WP site">
+      <span class="cert-title">Create Your First WordPress Plugin & Build a WP site</span>
+      <span class="cert-meta">Packt/Coursera • 2026</span>
+    </a>
+    
+    <!-- Card -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/Implement and Optimize WordPress Websites on AWS.pdf">
+      <img src="assets/pdf/webdev-certi/Implement and Optimize WordPress Websites onAWS.jpg" alt="Implement and Optimize WordPress Websites on AWS">
+      <span class="cert-title">Implement and Optimize WordPress Websites on AWS</span>
+      <span class="cert-meta">EDUCBA/Coursera • 2026</span>
+    </a>
+
+
+     <!-- Card -->
+    <a class="cert-card" href="assets/pdf/webdev-certi/WordPress Website Development Course.pdf">
+      <img src="assets/pdf/webdev-certi/WordPress Website Development Course.jpg" alt="WordPress Website Development Course">
+      <span class="cert-title">WordPress Website Development Course</span>
+      <span class="cert-meta">Learnkarts/Coursera • 2026</span>
+    </a>
+    
+
+  </div>
+
+</div>
+        <!--END TAB CERTIFICATE -->
+        
+      <div class="pastelBox-container">
+           <div class="pastelBox">
+               <p>I continuously invest in learning and professional growth to sharpen my technical and creative skills. Through various training programs, I strengthen my expertise in IT support, web development, UI/UX design, and graphic design, applying new knowledge and techniques to every project I take on.</p>
+           </div>
      </div>
 
     </div><!--END TRAININGS SECTION-->
+
+
+    
   
   <footer>
     <div class="footer-text">
       © 2025 Portfolio | vhariola@gmail.com
     </div>
   </footer>
+
 
     <script src="js/scripts.js"></script>
   </body>
