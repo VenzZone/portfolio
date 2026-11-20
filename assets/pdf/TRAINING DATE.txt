@@ -1,0 +1,31 @@
+LIST of TRAINING IN COURSERA
+Web Dev Training					
+System Administration and IT Infrastructure			May 22 2025
+Gen AI for Software Development: Code Generation for Python   	Feb 2 2024
+Google UX Design						Sept 11 2024
+Foundations of User Experience (UX) Design			August 26 2022
+Start the UX Design Process: Empathize, Define, and Ideate	Sept 2 2023
+Build Wireframes and LowFidelity Prototypes			Oct 31 2023
+Conduct UX Research and Test Early Concepts			Sept 11 2024
+Create High-Fidelity Designs and Prototypes in Figma		Sept 11 2024
+Build Dynamic User Interfaces (UI) for Websites			Sept 11 2024
+Design a User Experience for Social Good & Prepare for Jobs	Sept 11 2024
+Building Test Automation Framework using Selenium and TestNG	Feb 2 2024
+
+Technical Support Training
+Google IT Support						May 23 2025					
+Technical Support Fundamentals					March 11 2025
+The Bits and Bytes of Computer Networking			March 20 2025
+Operating Systems and You:Becoming a Power User			May 8 2025
+System Administration and IT Infrastructure Services		May 22 2025
+IT Security: Defense against the digital dark arts		May 23 2025
+Introduction of Cybersecurity					Nov 13 2024
+
+
+Graphic Designer Training
+Adobe Graphic Designer						May 20 2025
+Design Fundamentals						May 19 2025
+Generative AI Content Creation					May 19 2025
+Image Editing							May 19 2025
+Graphic Design							May 20 2025
+Document Design
